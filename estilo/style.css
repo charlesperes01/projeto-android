@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/*Importando fonte*/
+
+@font-face {/*Incluindo fonte*/
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{ /*Variáveis Globais - Sub-classe*/
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+* {/*Seleciona todos os elementos do HTML*/
+ margin: 0px; 
+ padding: 0px;
+
+}
+
+body{ /*Fundo do site*/
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+
+header {/*Topo*/
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /*Degrade-baixo p/ cima*/
+    min-height: 150px; /*Minimo de altura*/
+    text-align: center;
+    padding-top: 40px; /*Margem do fundo-em cima*/
+
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px; /*margem inferior*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267)   
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 500px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315)
+    
+
+}
+
+nav {/*Menu*/
+   background-color: var(--cor5); 
+   padding: 10px;
+   box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+}
+
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-decoration: none; /*Tirar o sublinhado*/
+    font-weight: bold;
+    /*transition-duration:.5s; transição */
+    
+}
+
+nav > a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main {/*Conteúdo do site - Principal*/
+    min-width: 300px; /*Largura minima de tela*/
+    max-width: 1000px; /*Largura maxima de tela*/
+    margin: auto; /*Conteúdo centralizado na tela*/
+    margin-bottom: 30px; /*Margem inferior*/
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418); /*Sombreamento*/
+    border-bottom-left-radius: 10px; /*Arredondamento da borda inf.esq*/
+    border-bottom-right-radius: 10px; /*Arredondamento da borda inf.dir*/
+}
+
+main h1{
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.6em;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor5);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1),transparent); /*Degrade direita p/ esq*/
+    text-indent: 8px;
+}
+
+main p{ /*parágrafos*/
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px; /*recúo de parágrafo*/
+    font-size: 1em;
+    line-height: 1.5em; /*Altura entre linhas*/
+}
+
+main strong{ /*Texto em negrito*/
+    color: var(--cor4);
+    font-weight: bold;
+    
+}
+
+main a{
+    font-weight: bold;
+    color: var(--cor5);
+
+}
+
+main img {
+    width: 100%;/*Largura*/
+    
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%; /*Barra preta do vídeo*/
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;/*Largura*/
+    height: 90%;/*Altura*/
+}
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.418);
+}
+
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*Margem negativa*/
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul{
+    /*list-style-type: '\2714\00A0'; - Tipo de marcador*/
+    list-style-position: inside; /*marcdor para o lado de dentro*/
+    columns: 2; /*Dividir em colunas*/
+}
+
+footer{/*Rodapé*/
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
